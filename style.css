@@ -1,0 +1,258 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    margin-top: 5rem;
+    font-family: 'Lato', sans-serif;
+    color: #353c42;
+    background-color: #fff;
+    font-size: 1.4rem;
+}
+.todo {
+    width: 80%;
+    max-height: 50%;
+    text-align: center;
+    border-radius: 1rem;
+    background: #fbd1a7;
+    box-shadow:  5px 5px 20px #dbdbdb,
+             -5px -5px 20px #fff;
+}
+
+.header {
+    border-radius: 1rem 1rem 0 0;
+    padding: 4rem;
+    background-color: #353c42;
+    min-height: 20rem;
+}
+
+h1 {
+    color: #fff;
+    font-weight: 400;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+}
+.todoInput {
+    width: 80%;
+    padding: 10px;
+    margin-right: 20px;
+    border: none;
+    border-radius: 1rem;
+    color: #353c42;
+    background-color:#fff;
+}
+::placeholder {
+    color: #cdcdcd;
+    font-size: 1.2rem;
+}
+
+.todoInput:focus {
+    outline: none;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.699);
+}
+
+.button {
+    color: #ffa614;
+    padding: 10px 22px;
+    border: 1px solid #fbd1a7;
+    border-radius: 1rem;
+    text-transform: uppercase;
+    cursor: pointer; 
+    transition: background-color 0.3s, color 0.3s ;
+    background-color: #353c42;
+
+}
+.button:hover {
+    background-color: #2f353a;
+     
+}
+
+.button:active {
+    transform: translateY(1px);
+     
+}
+.button:focus {
+    outline: none;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.699);
+}
+
+.todoList {
+    padding: 2rem 0;
+    background-color:#fbd1a7;
+    min-height: 10rem;
+}
+
+.todoList h3 {
+    text-transform: uppercase;
+    font-size: 2rem;
+    
+}
+.alertInfo {
+    color: #ffa614;
+}
+.headerInfo {
+    color:  #ca4026;
+    padding-top: 1rem;
+}
+
+.todoList li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem;
+    padding-left: 2rem;
+    text-align: left;
+    list-style: none;
+    background-color:#fff ;
+    border-radius: 5px;
+}
+
+.tools {
+    display: inline-block;
+}
+
+.tools button {
+    padding: 15px 10px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    transition: background-color .3s;
+   
+}
+.tools button:hover {
+    background-color: rgba(250, 245, 245, 0.7);
+}
+
+.complete {
+    color: #ffa614;
+}
+
+.edit {
+    font-weight: bold;
+    color: #5fad46;
+}
+
+.delete {
+    color: #ca4026;
+}
+
+.completed {
+    
+    text-decoration: line-through;
+    font-style: italic;
+    color: #cdcdcd;
+}
+
+
+.popup {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    position: fixed;
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 75%;
+    color: #fff;
+    
+    background: #353c42b3;
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 9.8px );
+    -webkit-backdrop-filter: blur( 9.5px );
+    border-radius: 10px;
+}
+
+.popup h3 {
+    padding-top: 2rem;
+    text-transform: uppercase;
+    
+}
+
+.popupInfo {
+    color: #ffa614;
+    margin-bottom: 20px;
+}
+
+.popupBody {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+.popupInput {
+    width: 100%;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    color: #353c42;
+    background-color: #fff;
+}
+
+.popupInput:focus {
+    outline: none;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.308);
+}
+
+.popupBtn {
+    background-color: #383e425d;
+    width: 30%;
+    margin: 1rem 1rem 0 1rem;
+}
+
+
+
+@media only screen and (max-width: 900px) {
+    .popup {
+        top: 40%;
+    }
+}
+@media only screen and (max-width: 768px) {
+    body {
+        margin-top: 2rem;
+        font-size: 1rem;
+    }
+    .todo {
+        width: 90%;
+    }
+    .header {
+        padding: 2rem;
+        
+    }
+    h1 {
+        font-size: 2rem;
+    }
+    .todoInput {
+        width: 100%;
+    }
+    
+    .addBtn {
+    font-size: 1.2rem;
+    margin-top: 2rem;
+
+    }
+    .tools button {
+    font-size: 1rem;
+    }
+
+    .popup {
+        top: 40%;
+    }
+
+    .popupBtn {
+        font-size: 1rem;
+        padding: 10px;
+        width: 40%;
+    }
+}
